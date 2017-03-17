@@ -1,0 +1,47 @@
+@mixin Centered {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+@mixin BKG {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+@mixin Inline {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+@mixin Col($code, $opacity) {
+	 background-color: rgba($code + ',' + $opacity);
+}
+@mixin Shrinked {
+  width: 90%;
+  margin: 0 auto;
+}
+@mixin TopLine {
+    position: relative;
+    &:before {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    content: '';
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+  }
+}
+@mixin GradientLine {
+    position: relative;
+    &:before {
+    content: '';
+    height: 5px;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(to right, $a-5, $a-6, $a-7);
+    width: 100%;
+  }
+}

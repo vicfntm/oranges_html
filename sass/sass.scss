@@ -1,0 +1,622 @@
+@import "mixins";
+@import "variables";
+@import "functions";
+@import "fonts";
+@import "svg";
+@import "reset";
+html {
+  font-size: 10px;
+  font-family: "Circe", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+.top-menu_wrapper {
+  position: absolute;
+  width: 100%;
+}
+
+.top-menu_container {
+  @include Shrinked;
+  font-size: 0;
+  height: 5.5rem;
+}
+
+.top-menu_info {
+  float: left;
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.top-menu_link,
+.top-menu_element {
+  display: inline-block;
+  color: $a-11;
+  font-size: 1.4vw;
+  vertical-align: middle;
+}
+
+.logo {
+  background-image: url(img/logo.svg);
+  width: 150px;
+  height: 55px;
+  @include BKG;
+  background-size: contain;
+}
+
+.top-menu_links {
+  width: 60%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.vfix {
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.top-menu_link {
+  text-transform: uppercase;
+  padding: 0 12.5px;
+  line-height: 3.5rem;
+  float: right;
+  cursor: pointer;
+}
+
+.__menu-active {
+  border-width: 2px;
+  border-radius: 20px;
+  border-style: solid;
+}
+
+.startPage {
+  @include BKG;
+  background-image: url(img/bg1.png);
+  width: 100%;
+  height: 100vh;
+  @include Centered;
+}
+
+.startPage_central-message {}
+
+.startPage_title {
+  font-family: "Circe-Bold", sans-serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: $a-11;
+  margin: 0;
+}
+
+.__marked {
+  color: $a-13;
+  background-color: $a-11;
+  margin: .5rem;
+  padding: 0 .5rem;
+  border-radius: 20px;
+}
+
+.startPage_start,
+.bottom_subscribe {
+  background-color: $a-8;
+  border-radius: 40px;
+  color: $a-11;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  width: 38rem;
+  height: 8rem;
+  line-height: 8rem;
+  border-width: 0;
+  &:hover {
+    transition: all 1s;
+    background-color: darken($a-8, 10%);
+  }
+}
+
+.startPage_content {
+  color: $a-11;
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  width: 60%;
+  margin: 0 auto;
+  padding: 3% 0;
+}
+
+.content {
+  height: 360rem;
+  background: linear-gradient(to bottom, $a-1, $a-2, $a-3, $a-4);
+  @include GradientLine;
+}
+
+.intro {
+  @include Inline;
+  @include Shrinked;
+  height: 51.5rem;
+  flex-direction: row;
+}
+
+.intro_main,
+.intro_image {
+  @include Centered;
+}
+
+.intro_main {
+  width: 45%;
+}
+
+.intro_image {
+  width: 55%;
+}
+
+.intro_title,
+.detail_title,
+.news_title,
+.table_title {
+  font-size: 2.6rem;
+  margin-bottom: 1.5rem;
+  color: $a-11;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.intro_text {
+  width: 70%;
+  color: $a-11;
+  opacity: 0.7;
+  word-spacing: 1px;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.intro_input {
+  background-color: transparent;
+  text-align: center;
+  width: 17rem;
+  height: 5rem;
+  border-color: $a-8;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 2px;
+  color: $a-8;
+  font-size: 1.5rem;
+  margin: 3.5rem 0;
+}
+
+.intro_image {
+  background-image: url(img/image1.png);
+  @include BKG;
+  background-size: contain;
+  width: 50%;
+  height: auto;
+}
+
+.options-container {
+  width: 100%;
+  height: 45.5rem;
+  @include Centered;
+  @include TopLine;
+}
+
+.options-container_title {
+  font-size: 1.3rem;
+  color: $a-11;
+  text-transform: uppercase;
+  padding-top: 5.5rem;
+}
+
+.options_wrapper {
+  @include Shrinked;
+  @include Inline;
+}
+
+.options-container_options {
+  @include Inline;
+  @include Shrinked;
+}
+
+.options-container_option {
+  width: 33%;
+  &:nth-child(1) {
+    .options-container_image {
+      background-image: url(img/icon1.svg);
+    }
+  }
+  &:nth-child(2) {
+    .options-container_image {
+      background-image: url(img/icon2.svg);
+    }
+  }
+  &:nth-child(3) {
+    .options-container_image {
+      background-image: url(img/icon3.svg);
+    }
+  }
+}
+
+.options-container_image {
+  width: 105px;
+  height: 105px;
+  @include BKG;
+  background-size: contain;
+  margin: 0 auto;
+}
+
+.options-container_description {
+  padding: 2rem 7rem;
+  color: $a-11;
+  opacity: 0.7;
+  font-size: 1.5rem;
+}
+
+.detail {
+  width: 100%;
+  height: 52rem;
+  @include TopLine;
+  @include Centered;
+}
+
+.detail_wrapper {
+  @include Shrinked;
+  @include Inline;
+}
+
+.detail_button,
+.intro_input {
+  width: 20rem;
+  float: left;
+  background-color: transparent;
+  color: $a-8;
+  border-color: $a-8;
+  border-radius: 30px;
+  border-style: solid;
+  height: 4.7rem;
+  cursor: pointer;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  &:after {
+    content: '>';
+    float: right;
+    padding-right: 1rem;
+    font-size: 2rem;
+  }
+}
+
+.detail_image-1,
+.detail_image-2 {
+  width: 50%;
+  height: auto;
+  @include BKG;
+  background-size: contain;
+}
+
+.detail_image-1 {
+  background-image: url(img/image2.png);
+}
+
+.detail_image-2 {
+  background-image: url(img/image3.png);
+}
+
+.detail_description {
+  width: 40%;
+}
+
+.detail_title {
+  width: 60%;
+}
+
+.detail_text {
+  width: 60%;
+  color: $a-11;
+  opacity: 0.7;
+  text-align: left;
+  padding-top: 5rem;
+  margin-bottom: 5rem;
+  font-size: 1.5rem;
+}
+
+.contact {
+  @include GradientLine;
+  width: 100%;
+  height: 59rem;
+  background-image: url(img/bg2.png);
+  @include BKG;
+}
+
+.contact_form {
+  //  width: 63rem;
+  width: 50%;
+  height: 56rem;
+  background-color: white;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 2px;
+  min-width: 30rem;
+  &:before {
+    content: '';
+    background-image: url(img/ribbon.png);
+    height: 6px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.contact_wrapper {
+  position: absolute;
+  top: 10rem;
+  left: 5%;
+  height: 56rem;
+  @include Centered;
+  @include Shrinked;
+}
+
+.contact_title {
+  padding-top: 7rem;
+  margin-bottom: 5rem;
+  font-size: 2.6rem;
+  text-transform: uppercase;
+}
+
+.contact_name,
+.contact_email,
+.contact_text-message,
+.contact_submit {
+  background-color: $a-14;
+  display: block;
+  margin: 0 auto 2.5rem;
+  width: 80%;
+}
+
+.contact_name,
+.contact_email,
+.contact_text-message {
+  position: relative;
+  &::placeholder {
+    text-transform: uppercase;
+    padding-left: 13px;
+  }
+}
+
+.contact_name {
+  height: 4rem;
+}
+
+.contact_email {
+  height: 4rem;
+}
+
+.contact_text-message {
+  word-wrap: break-word;
+  height: 14rem;
+  vertical-align: top;
+  &::placeholder {
+    padding-top: 15px;
+  }
+}
+
+.contact_submit {
+  background-color: $a-7;
+  height: 6rem;
+  color: $a-11;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 2px;
+  font-family: 'Circle-Bold', sans-serif;
+  font-weight: 700;
+}
+
+.news {
+  width: 100%;
+  height: 52rem;
+  @include TopLine;
+  @include Centered;
+}
+
+.news_wrapper {
+  @include Shrinked;
+  @include Inline;
+}
+
+.news_description {
+  width: 60%;
+}
+
+.news_text {
+  text-align: left;
+  color: $a-11;
+  font-size: 1.2rem;
+  &:nth-child(even) {
+    opacity: 0.7;
+    margin-bottom: .5rem;
+  }
+}
+
+.bottom {
+  height: 30rem;
+  @include Centered;
+}
+
+.bottom_wrapper {
+  @include Shrinked;
+}
+
+.legal {
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+  @include TopLine;
+  position: absolute;
+}
+
+.legal_wrapper {
+  @include Shrinked;
+  @include Inline;
+}
+
+.legal_rules {
+  @include Inline;
+  width: 20%;
+  text-transform: uppercase;
+  color: $a-11;
+  line-height: 6rem;
+  li {
+    padding: 0 .5rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+}
+
+.legal_copy>copy {
+  width: 40%;
+  text-transform: uppercase;
+  color: $a-11;
+  line-height: 6rem;
+  font-size: 1.2rem;
+}
+
+.news_description .table_title {
+  height: 3rem;
+  color: $a-11;
+}
+
+table.table_content {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td {
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1);
+  border-width: 1px;
+  height: 5rem;
+  padding: 0 .5rem;
+  &:nth-child(1) {
+    color: $a-9;
+  }
+  &:nth-child(2) {
+    color: $a-12;
+  }
+  &:nth-child(3) {
+    color: $a-8;
+  }
+}
+
+.bottom_title {
+  font-size: 2.8rem;
+  width: 30%;
+  padding-top: 7rem;
+  margin: 0 auto 4rem;
+  color: $a-11;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 900px) {
+  .content {
+    height: 370rem;
+  }
+  .intro {
+    @include Centered;
+    height: 43rem;
+  }
+  .intro_main {
+    margin: 0 auto;
+    height: 30rem;
+  }
+  .intro_image {
+    height: 16rem;
+    margin: 0 auto 1rem;
+  }
+  .intro_title {
+    text-align: center;
+  }
+  .intro_input {
+    margin: 3.5rem auto;
+  }
+  .intro_text {
+    width: 100%;
+    text-align: center;
+  }
+  .options-container {
+    height: 70rem;
+  }
+  .options_wrapper {
+    @include Centered;
+  }
+  .options-container_description {
+    padding: 0 .5rem;
+    width: 50%;
+    margin: 0 auto 1rem;
+  }
+  .options-container_option {
+    width: 100%;
+  }
+  .options-container_title {
+    padding-top: 2rem;
+  }
+  .detail {
+    height: 50rem;
+  }
+  .detail_wrapper {
+    @include Centered;
+  }
+  .detail_image-1,
+  .detail_image-2 {
+    height: 100px;
+    width: auto;
+  }
+  .detail_title,
+  .detail_text {
+    text-align: center;
+    width: 100%;
+  }
+  .detail_button {
+    margin: 0 auto;
+    float: none;
+  }
+  .detail_description {
+    margin: 0 auto;
+  }
+  .__reverse-1 {
+    order: 1;
+  }
+  .__reverse-2 {
+    order: 2;
+  }
+  .news_wrapper {
+    @include Centered;
+  }
+  .contact_form {
+    width: 90%;
+    min-width: 30rem;
+  }
+  .logo {
+    width: 20%;
+    min-width: 5rem;
+    cursor: pointer;
+  }
+  .bottom_title {
+    padding-top: 17rem;
+  }
+  .news_description {
+    width: 100%;
+    ul {
+      width: 45%;
+      margin: 0 auto;
+    }
+  }
+  .news_title {
+    text-align: center;
+  }
+  .table_title {
+    text-align: center;
+  }
+  table.table_content {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
